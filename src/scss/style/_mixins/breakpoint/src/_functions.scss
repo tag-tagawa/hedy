@@ -1,0 +1,50 @@
+// ============================================================================================= //
+//                                           FUNCTIONS                                           //
+// ============================================================================================= //
+
+@use "sass:list";
+@use "sass:map";
+@use "_mixins/strip-unit";
+@use "./variables";
+
+///
+/// Get value.
+///
+@function get-value($token) {
+	@return map.get(variables.$extend, $token);
+}
+
+///
+/// Get next.
+///
+@function get-next($value) {
+	$keys: map.keys(variables.$extend);
+	$n: list.index($keys, $value);
+
+	@return if($n < length($keys), list.nth($keys, $n + 1), null);
+}
+
+///
+/// Get screens list.
+///
+@function get-screens() {
+	@return variables.$extend;
+}
+
+///
+/// Set min.
+///
+@function set-min($token) {
+	$min: get-value($token);
+
+	@return if($min != 0, $min, null);
+}
+
+///
+/// Set max.
+///
+@function set-max($token) {
+	$max: get-value($token);
+
+	@return if($max and $max > 0, $max - 0.01, null);
+}

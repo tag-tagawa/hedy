@@ -1,0 +1,24 @@
+// ============================================================================================= //
+//                                           VARIABLES                                           //
+// ============================================================================================= //
+
+@use "sass:map";
+
+$_defaults: (
+    "xs": 320px,
+    "sm": 480px,
+    "md": 768px,
+    "lg": 960px,
+    "xl": 1200px,
+    "2xl": 1400px
+);
+
+$extend: ();
+$screens: () !default;
+$reset: false !default;
+
+@if $reset {
+    $extend: $screens;
+} @else {
+    $extend: map.merge($_defaults, $screens);
+}

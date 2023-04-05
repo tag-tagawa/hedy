@@ -1,0 +1,86 @@
+//----------  breakpoint setting  ----------//
+
+@use "sass:math";
+
+@use "_unsass/breakpoint";
+
+// ... or reset for fresh start...
+@include breakpoint.config(
+	(
+		"small": 600px,
+		"medium": 768px,
+		"large": 1024px,
+		"xlarge": 1280px,
+		"xxlarge": 1440px
+	),
+	true
+);
+
+$sns-colors: (
+	twitter: #1d9bf0,
+	facebook: #1877f2,
+	line: #06c755
+);
+
+//----------  global common setting  ----------//
+
+$global-bg-color: #fff;
+$global-font-size: 1.6rem;
+$global-font-color: #333;
+$global-sp-font-size: 1.4rem;
+$global-font-weight: 400;
+$global-width: 1280px;
+$global-content-padding: 0 4rem;
+$global-content-padding-sp: 0 20px;
+$global-line-height: 1.6;
+$global-view-port-width: 375px;
+
+//----------  sidebar setting  ----------//
+
+$sidebar-width: 300px;
+
+//----------  font settings  ----------//
+
+$font-family-gothic: "YuGothic", "游ゴシック", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, sans-serif;
+
+$font-family-moncho: "Yu Mincho", "游明朝", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
+$global-body-font-family: $font-family-gothic;
+
+//----------  form setting  ----------//
+
+$form-color: $global-font-color;
+$form-border-color: #000;
+$form-border-focus-color: darken($form-border-color, 20%);
+$form-input-padding: 1.2rem 1.6rem;
+
+$form-inpur-border-radius: 0px;
+$form-input-color: $global-font-color;
+$form-input-focus: darken($form-input-color, 10%);
+$form-input-font-size: 1.4rem;
+$form-input-bg-color: #fff;
+$form-input-bg-hover-color: darken($form-input-bg-color, 2%);
+$form-placeholder-color: #aaa;
+$form-select-padding: 1.2rem 3.2rem 1.2rem 1.6rem;
+
+//----------   button setting  ----------//
+
+$button-padding: 1.8rem 1.6rem;
+$button-bg-color: #1ea3f4;
+$button-bg-hover-color: darken($button-bg-color, 5%);
+$button-color: #fff;
+$button-border-radius: 0px;
+//----------   link setting  ----------//
+
+$link-color: #0d6efd;
+$link-color-visited: #0d6efd;
+$link-color-hover: #f36;
+
+//----------   border setting  ----------//
+
+$global-border-color: #bfcdd1;
+
+//----------  drawer setting  ----------//
+
+$global-drawer-height: 3.2rem;
+$global-border-width: 0.2rem;

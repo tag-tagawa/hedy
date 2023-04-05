@@ -1,0 +1,63 @@
+{
+  "_from": "@sass-collective/strip-unit@^3.1.2",
+  "_id": "@sass-collective/strip-unit@3.1.2",
+  "_inBundle": false,
+  "_integrity": "sha512-Y1XfUzcJO0NXhmCN5rr/wPS82GovI1t0qio+JRXHRwkYh3meugGPa216+x8C6JWn5xE7X2IRTs3hIu4blYCn6A==",
+  "_location": "/@sass-collective/strip-unit",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@sass-collective/strip-unit@^3.1.2",
+    "name": "@sass-collective/strip-unit",
+    "escapedName": "@sass-collective%2fstrip-unit",
+    "scope": "@sass-collective",
+    "rawSpec": "^3.1.2",
+    "saveSpec": null,
+    "fetchSpec": "^3.1.2"
+  },
+  "_requiredBy": [
+    "/@unsass/breakpoint"
+  ],
+  "_resolved": "https://registry.npmjs.org/@sass-collective/strip-unit/-/strip-unit-3.1.2.tgz",
+  "_shasum": "67f319739538d8d15cce43187ac4651a30df1248",
+  "_spec": "@sass-collective/strip-unit@^3.1.2",
+  "_where": "D:\\TAG_Dropbox\\TAG Dropbox\\obara T\\laragon\\www\\html-baseset2022\\node_modules\\@unsass\\breakpoint",
+  "author": {
+    "name": "The Sass Collective Authors"
+  },
+  "bugs": {
+    "url": "https://github.com/sass-collective/sass-collective/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "sass": "^1.45.2"
+  },
+  "deprecated": false,
+  "description": "Strip unit on CSS value.",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=7.0.0"
+  },
+  "files": [
+    "*.scss"
+  ],
+  "gitHead": "ed02fe5a2201b4adb2de060b2b3eb51862641450",
+  "homepage": "https://github.com/sass-collective/sass-collective/tree/master/packages/strip-unit",
+  "keywords": [
+    "sass",
+    "strip",
+    "unit",
+    "css",
+    "front-end"
+  ],
+  "license": "MIT",
+  "main": "index.scss",
+  "name": "@sass-collective/strip-unit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sass-collective/sass-collective.git",
+    "directory": "packages/strip-unit"
+  },
+  "version": "3.1.2"
+}

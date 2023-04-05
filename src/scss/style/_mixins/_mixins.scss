@@ -1,0 +1,219 @@
+///
+/// mixins
+///
+
+@use "_settings" as *;
+
+@use "sass:math";
+@use "sass:map";
+///
+/// px_vw pixel veiw width conver
+///
+/// @param   {number}   $size  set pixel size
+/// @param   {number}   $viewport set viewport basesize
+///
+
+@function px_vw($size, $viewport: $global-view-port-width) {
+	$rate: math.div(100, strip_unit($viewport));
+
+	@if (strip_unit($size) == 0 or $size == "auto") {
+		@return $size;
+	} @else {
+		@return $rate * strip_unit($size) * 1vw;
+	}
+}
+
+@mixin fz_vw_sp($font_size: 10, $height: false, $space: true) {
+	font-size: $font_size * 1px;
+	font-size: get_vw($font_size, $global-view-port-width);
+}
+
+///
+/// get_vw
+///
+/// @param   {array}   $padding convert sizes
+/// @param   {boolan,string}   $viewport set viewpost basesize
+///
+/// @return  {string}  $list return vw lists
+///
+@function get_vw($padding, $viewport: false) {
+	$lengh: length($padding);
+	$list: ();
+	$pd: null;
+
+	@if $viewport {
+	} @else {
+		$viewport: $global-view-port-width;
+	}
+	@for $i from 1 through $lengh {
+		//	@debug nth($padding, $i);
+
+		@if $viewport {
+			$pd: px_vw(nth($padding, $i), $viewport);
+		} @else {
+			$pd: px_vw(nth($padding, $i));
+		}
+
+		//	@debug $pd;
+
+		//$list: join($pd, $list);
+		$list: append($list, $pd);
+	}
+	@return $list;
+}
+///
+/// get_em
+///
+/// @param   {number}   $size  set pixel size
+/// @param   {number}   $basesize set basesize
+///
+@function get_em($size, $basesize: 16) {
+	@return math.div(strip_unit($size), $basesize) * 1em;
+}
+
+///
+/// get_line_height
+///
+/// @param   {number}   $size  set pixel size
+/// @param   {number}   $basesize set basesize
+///
+@function line_height($size, $basesize: 16) {
+	@return math.div($basesize, strip_unit($size));
+}
+
+///
+/// strip_unit remove number unit
+///
+/// @param   {string}   $number  remove unit format
+///
+/// @return  {number}   $number return strip formnat
+///
+@function strip_unit($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return math.div($number, ($number * 0 + 1));
+	}
+
+	@return $number;
+}
+
+///
+/// vw_to_rem
+///
+@function vw_to_rem($size, $oldviewport: 1125, $newviewport: 940) {
+	$vw: #{get_vw($size, $oldviewport)};
+	$numbarsize: to-number($vw);
+
+	@return ($newviewport * $numbarsize) * 0.001rem;
+}
+
+///
+/// get_vw_rem
+///
+@function get_vw_rem($size, $oldviewport: 1900, $newviewport: 1280) {
+	$lengh: length($size);
+	$list: ();
+	$pd: null;
+
+	@for $i from 1 through $lengh {
+		@if (strip_unit(nth($size, $i)) == 0 or nth($size, $i) == "auto") {
+			$pd: nth($size, $i);
+		} @else {
+			$pd: vw_to_rem(nth($size, $i), $oldviewport, $newviewport);
+		}
+
+		$list: append($list, $pd);
+	}
+
+	@return $list;
+}
+
+///
+/// strip-unit-fix
+///
+@function strip-unit-fix($value, $newUnit: "") {
+	//https://www.sitepoint.com/understanding-sass-units/
+	$units: (
+		"px": 0px,
+		"cm": 0cm,
+		"mm": 0mm,
+		"%": 0%,
+		"ch": 0ch,
+		"in": 0in,
+		"em": 0em,
+		"rem": 0rem,
+		"pt": 0pt,
+		"pc": 0pc,
+		"ex": 0ex,
+		"vw": 0vw,
+		"vh": 0vh,
+		"vmin": 0vmin,
+		"vmax": 0vmax,
+		"deg": 0deg,
+		"turn": 0turn,
+		"rad": 0rad,
+		"grad": 0grad,
+		"s": 0s,
+		"ms": 0ms,
+		"Hz": 0hz,
+		"kHz": 0khz,
+		"dppx": 0dppx,
+		"dpcm": 0dpcm,
+		"dpi": 0dpi
+	);
+
+	//https://css-tricks.com/snippets/sass/strip-unit-function/
+	$number: math.div($value, ($value * 0 + 1));
+
+	@if ($newUnit == "") {
+		@return $number;
+	}
+
+	@if map-has-key($units, $newUnit) {
+		@return map-get($units, $newUnit) + $number;
+	}
+
+	@error "Unknown unit `#{$newUnit}`.";
+}
+///
+///  to-number
+///
+@function to-number($value) {
+	@if type-of($value) == "number" {
+		@return $value;
+	} @else if type-of($value) != "string" {
+		@error 'Value for `to-number` should be a number or a string.';
+	}
+
+	$result: 0;
+	$digits: 0;
+	$minus: str-slice($value, 1, 1) == "-";
+	$numbers: (
+		"0": 0,
+		"1": 1,
+		"2": 2,
+		"3": 3,
+		"4": 4,
+		"5": 5,
+		"6": 6,
+		"7": 7,
+		"8": 8,
+		"9": 9
+	);
+
+	@for $i from if($minus, 2, 1) through str-length($value) {
+		$character: str-slice($value, $i, $i);
+
+		@if (index(map-keys($numbers), $character) or $character == ".") {
+			@if $character == "." {
+				$digits: 1;
+			} @else if $digits == 0 {
+				$result: $result * 10 + map-get($numbers, $character);
+			} @else {
+				$digits: $digits * 10;
+				$result: $result + math.div(map-get($numbers, $character), $digits);
+			}
+		}
+	}
+
+	@return if($minus, -$result, $result);
+}
