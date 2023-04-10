@@ -1,3 +1,4 @@
+@use 'sass:meta';
 @use '_settings'as *;
 @use '_mixins/index'as *;
 @use '_unsass/breakpoint';
@@ -3181,3 +3182,6 @@ _:future,
         margin: 0 0 0;
     }
 }
+
+// 20230410 add css
+@include meta.load-css("_dev_custom_sp");
