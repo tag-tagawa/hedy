@@ -35,5 +35,8 @@ import {
 // import index slider js
 //import './lib/index-slider.js';
 
+// import 20220410 pc-drawer
+import './lib/pc-drawer.js';
+
 // import 20220410 sp-drawer
-//import './lib/sp-drawer.js';
+import './lib/sp-drawer.js';
