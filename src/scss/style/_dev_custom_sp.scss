@@ -6,7 +6,7 @@
 // 20230406 add
 
 $global-drawer-height: 14px;
-$global-border-width: 2px;
+$global-border-width: 1px;
 
 @include breakpoint.down(medium) {
 	.c-drawer-overlay {
@@ -35,6 +35,10 @@ $global-border-width: 2px;
 
 		.bl_header_global {
 			width: 18px;
+
+			.icon-global {
+				aspect-ratio: 1/1;
+			}
 		}
 
 		.fs-l-header__logo {
@@ -60,7 +64,7 @@ $global-border-width: 2px;
 			width: 20px;
 			height: auto;
 			aspect-ratio: 1/1;
-			padding: 6px 0 0 0;
+			padding: 7px 0 0 0;
 			background-color: transparent;
 			border: none;
 			.sp-menu-btn {
@@ -233,6 +237,7 @@ $global-border-width: 2px;
 				&-title {
 					position: relative;
 					padding: 12.5px 0;
+					text-decoration: none;
 					&::before {
 						content: "";
 						width: 22px;
@@ -343,6 +348,7 @@ $global-border-width: 2px;
 				}
 
 				input[type="text"],
+				input[type="number"],
 				select {
 					border: 1px solid #959595;
 					border-radius: 0;
@@ -702,6 +708,7 @@ $global-border-width: 2px;
 			.slide-menu {
 				.title {
 					position: relative;
+					text-decoration: none;
 					&::before {
 						content: "";
 						background: inline("icon-arrow-right.svg") no-repeat center center;
@@ -858,6 +865,7 @@ $global-border-width: 2px;
 						align-items: center;
 						padding: 6px 30px;
 						min-height: 40px;
+						text-decoration: none;
 						&::before {
 							content: "";
 							background: inline("icon-arrow.svg") no-repeat left center;
