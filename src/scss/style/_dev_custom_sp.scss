@@ -64,7 +64,7 @@ $global-border-width: 1px;
 			width: 20px;
 			height: auto;
 			aspect-ratio: 1/1;
-			padding: 7px 0 0 0;
+			padding: 7px 0 0;
 			background-color: transparent;
 			border: none;
 			.sp-menu-btn {
@@ -180,7 +180,7 @@ $global-border-width: 1px;
 
 			&-menu-lists {
 				position: relative;
-				padding: 20px 20px;
+				padding: 20px;
 				&.is-child-open {
 					left: -100%;
 				}
@@ -226,8 +226,7 @@ $global-border-width: 1px;
 								margin-top: 40px;
 							}
 
-							&.mt-0 {
-							}
+							&.mt-0 {}
 						}
 					}
 				}
@@ -302,8 +301,7 @@ $global-border-width: 1px;
 							}
 						}
 						&__radioMark {
-							&::before {
-							}
+							&::before {}
 						}
 					}
 
@@ -328,15 +326,13 @@ $global-border-width: 1px;
 			}
 
 			&-wrap {
-				.fs-c-inputTable {
-				}
+				.fs-c-inputTable {}
 
 				.fs-c-inputTable__headerCell {
 					//	font-weight: 400;
 					font-size: 16px;
 					font-weight: 400;
-					label {
-					}
+					label {}
 				}
 
 				.fs-c-dropdown {
@@ -555,9 +551,11 @@ $global-border-width: 1px;
 					#fs_input_productSearchColor_15 + label .fs-c-checkbox__checkMark {
 						background: linear-gradient(to right, darken(red, 10%), darken(orange, 10%), darken(yellow, 10%), darken(green, 10%), darken(aqua, 10%), darken(blue, 10%), darken(purple, 10%));
 					}
+
 					#fs_input_productSearchColor_16 + label .fs-c-checkbox__checkMark {
 						background-color: #bdc2c8;
 					}
+
 					#fs_input_productSearchColor_17 {
 						+ label {
 							&::after {
@@ -578,18 +576,7 @@ $global-border-width: 1px;
 						}
 					}
 					#fs_input_productSearchColor_18 + label .fs-c-checkbox__checkMark {
-						background: linear-gradient(
-							90deg,
-							rgba(236, 71, 148, 1) 0%,
-							rgba(236, 71, 148, 1) 20%,
-							rgba(187, 50, 138, 1) 20%,
-							rgba(187, 50, 138, 1) 40%,
-							rgba(202, 200, 1, 1) 40%,
-							rgba(202, 200, 1, 1) 60%,
-							rgba(10, 105, 153, 1) 60%,
-							rgba(10, 105, 153, 1) 80%,
-							rgba(243, 154, 70, 1) 80%
-						);
+						background: linear-gradient(90deg, rgba(236, 71, 148, 1) 0%, rgba(236, 71, 148, 1) 20%, rgba(187, 50, 138, 1) 20%, rgba(187, 50, 138, 1) 40%, rgba(202, 200, 1, 1) 40%, rgba(202, 200, 1, 1) 60%, rgba(10, 105, 153, 1) 60%, rgba(10, 105, 153, 1) 80%, rgba(243, 154, 70, 1) 80%);
 					}
 					.fs-c-checkbox {
 						width: 100%;
@@ -684,8 +671,7 @@ $global-border-width: 1px;
 							margin-right: 6px;
 						}
 
-						input[type="text"] {
-						}
+						input[type="text"] {}
 					}
 
 					.sep {
@@ -778,8 +764,7 @@ $global-border-width: 1px;
 								background: inline("icon-menu-search.svg") no-repeat center center;
 							}
 						}
-						.icon {
-						}
+						.icon {}
 					}
 				}
 			}
@@ -800,7 +785,7 @@ $global-border-width: 1px;
 				//max-height: calc(100vh - var(--hh) - 50px);
 
 				&.is-open {
-					right: 0%;
+					right: 0;
 					//	display: block;
 				}
 
