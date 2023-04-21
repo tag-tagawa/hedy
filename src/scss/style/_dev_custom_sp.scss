@@ -555,7 +555,42 @@ $global-border-width: 1px;
 					#fs_input_productSearchColor_15 + label .fs-c-checkbox__checkMark {
 						background: linear-gradient(to right, darken(red, 10%), darken(orange, 10%), darken(yellow, 10%), darken(green, 10%), darken(aqua, 10%), darken(blue, 10%), darken(purple, 10%));
 					}
-
+					#fs_input_productSearchColor_16 + label .fs-c-checkbox__checkMark {
+						background-color: #bdc2c8;
+					}
+					#fs_input_productSearchColor_17 {
+						+ label {
+							&::after {
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 0;
+								right: 0;
+								bottom: 0;
+								margin: auto;
+								width: calc(100% - 5px);
+								height: calc(100% - 5px);
+								border: 1.5px dashed #aa8765;
+							}
+							.fs-c-checkbox__checkMark {
+								background-color: #160a95;
+							}
+						}
+					}
+					#fs_input_productSearchColor_18 + label .fs-c-checkbox__checkMark {
+						background: linear-gradient(
+							90deg,
+							rgba(236, 71, 148, 1) 0%,
+							rgba(236, 71, 148, 1) 20%,
+							rgba(187, 50, 138, 1) 20%,
+							rgba(187, 50, 138, 1) 40%,
+							rgba(202, 200, 1, 1) 40%,
+							rgba(202, 200, 1, 1) 60%,
+							rgba(10, 105, 153, 1) 60%,
+							rgba(10, 105, 153, 1) 80%,
+							rgba(243, 154, 70, 1) 80%
+						);
+					}
 					.fs-c-checkbox {
 						width: 100%;
 						label {

@@ -63,7 +63,7 @@ if (js_navi_open.length) {
 
 			const current_navi = e.currentTarget;
 
-			console.log(current_navi);
+			//console.log(current_navi);
 
 			if (navi_open == false) {
 
@@ -127,7 +127,7 @@ function unloadingWebsite() {
 
 		const slide_child_menu_open = document.querySelector('.slide-child-menu.is-open');
 
-		console.log(slide_child_menu_open);
+		//console.log(slide_child_menu_open);
 
 		if (slide_child_menu_open) {
 
@@ -137,7 +137,7 @@ function unloadingWebsite() {
 
 		const drawer_child_menu_open = document.querySelectorAll('.drawer-menu-lists.is-child-open');
 
-		console.log(drawer_child_menu_open);
+		//	console.log(drawer_child_menu_open);
 		for (let i = 0; i < drawer_child_menu_open.length; i++) {
 			drawer_child_menu_open[i].classList.remove('is-child-open');
 
@@ -171,7 +171,7 @@ function unloadingWebsite() {
  */
 function drawer_open(current_navi) {
 
-	console.log('open');
+	//console.log('open');
 
 	dbody.appendChild(drawer_overlay);
 	dbody.classList.add('is-drawer-open');
@@ -238,7 +238,7 @@ function drawer_close(current_navi) {
 
 			const slide_child_menu_open = document.querySelector('.slide-child-menu.is-open');
 
-			console.log(slide_child_menu_open);
+			//console.log(slide_child_menu_open);
 
 			if (slide_child_menu_open) {
 
@@ -248,7 +248,7 @@ function drawer_close(current_navi) {
 
 			const drawer_child_menu_open = document.querySelectorAll('.drawer-menu-lists.is-child-open');
 
-			console.log(drawer_child_menu_open);
+			//	console.log(drawer_child_menu_open);
 			for (let i = 0; i < drawer_child_menu_open.length; i++) {
 				drawer_child_menu_open[i].classList.remove('is-child-open');
 
@@ -290,11 +290,11 @@ if (js_slidechild_menu_open.length) {
 
 			const current_target = e.currentTarget;
 
-			console.log('click');
+			//	console.log('click');
 
 			const active_slide_contents = current_target.nextElementSibling;
 
-			console.log(active_slide_contents);
+			//	console.log(active_slide_contents);
 
 			const active_slide_menu_wrap = active_slide_contents.querySelector('.slide-child-menu-wrap');
 			//console.log(active_slide_contents.querySelector('.slide-child-menu-wrap'));
@@ -303,7 +303,7 @@ if (js_slidechild_menu_open.length) {
 			const drawer_head_height = drawer_head.offsetHeight;
 			dbody.classList.add('is-drawer-submenu-open');
 
-			console.log(drawer_head_height);
+			//			console.log(drawer_head_height);
 
 			active_slide_contents.style.display = 'block';
 			active_slide_contents.style.left = 0;
@@ -395,7 +395,7 @@ if (js_slidechild_menu_close.length) {
 
 			const current_target = e.currentTarget;
 
-			console.log('click');
+			//	console.log('click');
 
 			const active_slide_contents = current_target.closest('.slide-child-menu');
 
@@ -475,7 +475,7 @@ function get_header_height() {
 
 		//console.log();
 
-		console.log(input_wrap.offsetHeight);
+		//	console.log(input_wrap.offsetHeight);
 		let hh = fs_head.offsetHeight - input_wrap.offsetHeight - parseInt(fs_head_style.paddingBottom);
 
 		//console.log(hh.offsetHeight);
