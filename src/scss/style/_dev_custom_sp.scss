@@ -191,7 +191,7 @@ $global-border-width: 1px;
 					a {
 						font-size: 16px;
 						letter-spacing: 0;
-						padding: 12.5px 12px;
+						padding: 8px 12px;
 					}
 				}
 
@@ -687,6 +687,7 @@ $global-border-width: 1px;
 
 				&-submit {
 					gap: 10px;
+					padding: 0 2px;
 
 					.button {
 						&-clear,
