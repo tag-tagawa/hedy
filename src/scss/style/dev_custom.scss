@@ -3276,11 +3276,12 @@ _:future,
             .gnav__lang{
                 a{
                     display: block;
-                    width: 28px;
-                    height: 35px;
+                    width: 25px;
+                    height: auto;
                     background: url(/item/images/common/icon_lang.svg) top center no-repeat;
                     background-size: contain;
                     text-indent: -9999px;
+                    aspect-ratio: 1/1;
                 }
             }
             .gnav__search{
@@ -3433,6 +3434,8 @@ _:future,
             .has-child__Search__inner{
                 margin: 0px 20px 0px 31px;
                 height: 100%;
+                transform: none;
+                opacity: 1;
             }
             .fs-p-productSearch{
                 height: 100%;
@@ -3882,17 +3885,22 @@ _:future,
         //ヘッダー ユーティリティ
         .fs-l-header__utility{
             .fs-p-headerUtilityMenu__mods{
+                margin: 0 6px 0 8px;
                 li{
-                    margin: 0 6px 0 8px;
+                    margin-left: 0;
                     overflow: visible;
                     span a{
                         display: block;
-                        width: 30px;
-                        height: 30px;
+                        width: 25px;
+                        height: 25px;
                         padding: 0;
                         margin: 0;
                         overflow: hidden;
                     }
+                    + li{
+                        margin-left: 20px;
+                    }
+
                 }
                 .mypage span a{
                     background: url(/item/images/common/icon_mypage.svg) 0 0 no-repeat;
@@ -3907,6 +3915,7 @@ _:future,
                     background-size: contain;
                     .fs-client-cart-count{
                         right: -6px;
+                        text-indent: initial;
                     }
                 }
             }
