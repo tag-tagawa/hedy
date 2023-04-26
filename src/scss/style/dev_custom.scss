@@ -3268,7 +3268,13 @@ _:future,
             transition: background-color 10000s ease-in-out 0s;
         }
         
-
+        .fs-p-logo{
+            height: 65px;
+            padding: 3px 8px 8px 8px;
+            img.fs-p-logo__image{
+                max-height: 65px;
+            }
+        }
         // left（開く前）
         .fs-l-header__leftContainer{
             display: flex;
@@ -3291,7 +3297,9 @@ _:future,
                     font-size: 1.3rem;
                     border: initial;
                     border-bottom:#707070 1px solid;
-                    padding-left: 4px;
+                }
+                input{
+                    padding: 3px 0;
                 }
                 input[type=text]:focus {
                     outline: 0;
@@ -3434,8 +3442,8 @@ _:future,
             .has-child__Search__inner{
                 margin: 0px 20px 0px 31px;
                 height: 100%;
-                transform: none;
-                opacity: 1;
+                transform: none !important;
+                opacity: 1 !important;
             }
             .fs-p-productSearch{
                 height: 100%;
