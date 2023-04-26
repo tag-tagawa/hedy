@@ -19,6 +19,10 @@ $global-border-width: 1px;
 		z-index: 0;
 	}
 
+	.fs-preview-header{
+		margin-bottom: 2px;
+	}
+
 	.is-drawer-open {
 		.fs-l-header {
 			background-color: #fff;
@@ -27,7 +31,7 @@ $global-border-width: 1px;
 	}
 
 	.fs-l-header.ly_header {
-		padding: get_vw(12 12, 375);
+		padding: get_vw(12 12 10, 375);
 
 		.fs-l-header__drawerOpener {
 			margin-right: 4px;
@@ -49,6 +53,10 @@ $global-border-width: 1px;
 					width: 86px;
 				}
 			}
+		}
+
+		.bl_header_inputWrap {			
+			height: 22px;			
 		}
 	}
 
@@ -693,7 +701,7 @@ $global-border-width: 1px;
 						&-clear,
 						&-search {
 							width: 100%;
-							min-height: 30px;
+							min-height: 43px;
 							padding: 2px 6px;
 							line-height: 1.4;
 
