@@ -240,9 +240,11 @@ $global-border-width: 1px;
 				}
 
 				> tbody {
+				//	display: inherit;
 					> tr {
 						+ tr {
 							margin-top: 0;
+							flex-wrap: nowrap;
 							&.mt-40 {
 								margin-top: 40px;
 							}
@@ -387,9 +389,12 @@ $global-border-width: 1px;
 					
 				}
 				
-				.input-search-keyword{
+				.input-search-keyword,
+				.input-search-price{
 					height: 43px;
 				}
+
+			
 
 				select {
 					//min-height: 43px;
@@ -402,15 +407,16 @@ $global-border-width: 1px;
 						display: flex;
 						flex-direction: column;
 						gap: 0;
-						border-bottom: 1px solid #dbd7d7;
-
+						//border-bottom: 1px solid #dbd7d7;
+						margin-bottom: 0;
 						.fs-c-radio {
 							border-top: 1px solid #dbd7d7;
 							width: 100%;
 							margin: 0;
-							display: block;
-							padding: 12px 18px;
-
+						//	display: block;
+							padding: 10.5px 18px;
+							display:flex;
+							align-items: center;
 							line-height: 1.4;
 							/*position: relative;
 	
@@ -423,6 +429,10 @@ $global-border-width: 1px;
 								left: 0;
 								bottom: 0;
 							}*/
+
+							&:last-child{
+							//	margin-bottom: 0;
+							}
 						}
 					}
 
@@ -435,6 +445,7 @@ $global-border-width: 1px;
 						//border-bottom: 1px solid #dbd7d7;
 						//margin-bottom: -1px;
 						position: relative;
+						margin-bottom: -1px;
 
 						&::after {
 							content: "";
@@ -449,9 +460,10 @@ $global-border-width: 1px;
 							border-bottom: 1px solid #dbd7d7;
 							width: 50%;
 							margin: 0;
-							display: block;
-							padding: 10px 14px;
-
+							//display: block;
+							padding: 8.25px 4px 8.25px 14px;
+							display:flex;
+							align-items: center;
 							&:nth-child(odd) {
 								position: relative;
 
@@ -549,7 +561,7 @@ $global-border-width: 1px;
 					grid-template-rows: repeat(auto-fit, 1fr);
 					grid-template-columns: repeat(3, 1fr);
 					gap: 12px 12px;
-
+					margin-bottom: 11.415px;
 					#fs_input_productSearchColor_1 + label .fs-c-checkbox__checkMark {
 						background: #000;
 					}
@@ -702,7 +714,7 @@ $global-border-width: 1px;
 					display: flex;
 					flex-wrap: wrap;
 					//	padding-left: 20px;
-
+					margin-bottom:14.415px;
 					.price-input {
 						flex: 1;
 						min-width: 20px;

@@ -2984,6 +2984,7 @@ body.active {
 		margin-top: 10px;
 	}
 	.fs-p-drawer .product-search .fs-c-inputTable > tbody > tr + tr {
+		flex-wrap: nowrap;
 		margin-top: 0;
 	}
 	.fs-p-drawer .product-search .fs-c-inputTable > tbody > tr + tr.mt-40 {
@@ -3078,7 +3079,8 @@ body.active {
 		border: 1px solid #959595;
 		border-radius: 0;
 	}
-	.fs-p-drawer .product-search-wrap .input-search-keyword {
+	.fs-p-drawer .product-search-wrap .input-search-keyword,
+	.fs-p-drawer .product-search-wrap .input-search-price {
 		height: 43px;
 	}
 	.fs-p-drawer .product-search .group-radio-1 {
@@ -3087,14 +3089,17 @@ body.active {
 		display: -webkit-box;
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 0;
 		gap: 0;
-		border-bottom: 1px solid #dbd7d7;
 	}
 	.fs-p-drawer .product-search .group-radio-1 .fs-c-radio {
-		display: block;
+		-webkit-box-align: center;
+		display: -webkit-box;
+		display: flex;
+		align-items: center;
 		width: 100%;
 		margin: 0;
-		padding: 12px 18px;
+		padding: 10.5px 18px;
 		border-top: 1px solid #dbd7d7;
 		line-height: 1.4;
 		/*position: relative;
@@ -3114,6 +3119,7 @@ body.active {
 		display: flex;
 		position: relative;
 		flex-wrap: wrap;
+		margin-bottom: -1px;
 		gap: 0;
 		border-top: 1px solid #dbd7d7;
 	}
@@ -3127,10 +3133,13 @@ body.active {
 		content: "";
 	}
 	.fs-p-drawer .product-search .group-radio-2 .fs-c-radio {
-		display: block;
+		-webkit-box-align: center;
+		display: -webkit-box;
+		display: flex;
+		align-items: center;
 		width: 50%;
 		margin: 0;
-		padding: 10px 14px;
+		padding: 8.25px 4px 8.25px 14px;
 		border-bottom: 1px solid #dbd7d7;
 		/*position: relative;
 
@@ -3218,6 +3227,7 @@ body.active {
 		display: grid;
 		grid-template-rows: repeat(auto-fit, 1fr);
 		grid-template-columns: repeat(3, 1fr);
+		margin-bottom: 11.415px;
 		gap: 12px 12px;
 	}
 	.fs-p-drawer .product-search .group-check-color-1 #fs_input_productSearchColor_1 + label .fs-c-checkbox__checkMark {
@@ -3354,6 +3364,7 @@ body.active {
 		display: -webkit-box;
 		display: flex;
 		flex-wrap: wrap;
+		margin-bottom: 14.415px;
 	}
 	.fs-p-drawer .product-search .group-price .price-input {
 		-webkit-box-flex: 1;
