@@ -3011,7 +3011,7 @@ body.active {
 	.fs-p-drawer .product-search .search-panel-title::before {
 		position: absolute;
 		top: 0;
-		right: 6px;
+		right: 10px;
 		bottom: 0;
 		aspect-ratio: 1/1;
 		width: 22px;
