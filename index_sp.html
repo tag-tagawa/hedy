@@ -74,15 +74,15 @@
 	<script src="//r2.future-shop.jp/fs.hedy/pc/recommend.js"></script>
 
 	<script type="text/javascript">
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('DOMContentLoaded', function () {
 			_FS.CMATag('{"fs_member_id":"{@ member.id @}","fs_page_kind":"top"}')
 		})
 	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
-		jQuery(function($) {
-			$('.tab_snap li').click(function() {
+		jQuery(function ($) {
+			$('.tab_snap li').click(function () {
 				$('.is-active').removeClass('is-active');
 				$(this).addClass('is-active');
 				$('.is-show').removeClass('is-show');
@@ -103,12 +103,11 @@
 	<!-- **OGPタグ（フリーパーツ）↑↑ -->
 	<!-- **独自css_sp↓↓ -->
 	<!-- ここにCSSファイルURLを追記 -->
-	<link rel="stylesheet" href="https://hedy.itembox.design/item/css/custom.css?t=20230405124946">
 	<link rel="stylesheet" href="/item/css/dev_custom.css?t=20230405124946">
 	<!-- **独自css_sp -->
 	<script type="text/javascript">
-		$(function() {
-			$('.fs-l-header .language_link p').click(function() {
+		$(function () {
+			$('.fs-l-header .language_link p').click(function () {
 				$(this).toggleClass('open');
 				$(this).siblings('ul').slideToggle('fast');
 			});
@@ -119,10 +118,10 @@
 		});
 	</script>
 	<script>
-		$(function() {
+		$(function () {
 			var topBtn = $('.totop');
 			//スクロールしてトップ
-			topBtn.click(function() {
+			topBtn.click(function () {
 				$('body,html').animate({
 					scrollTop: 0
 				}, 500);
@@ -132,7 +131,7 @@
 	</script>
 	<script type="text/javascript" src="https://hedy.itembox.design/item/js/jquery.cookie.js?t=20230405124946"></script>
 	<script>
-		$(function() {
+		$(function () {
 			//サイドナビ開閉をCookieから復元
 			var pos = $.cookie("side_category");
 			if (pos == undefined) {
@@ -141,7 +140,7 @@
 			$(".fs-l-sideArea li.fs-pt-menu__item--lv1:eq(" + pos + ") ul li").show();
 			$(".fs-l-sideArea li.fs-pt-menu__item--lv1:eq(" + pos + ") ul").addClass('open');
 			//サイドナビ開閉をCookieに記録
-			$(".fs-l-main .fs-l-sideArea ul ul a").click(function() {
+			$(".fs-l-main .fs-l-sideArea ul ul a").click(function () {
 				target = $(this).parents("li.fs-pt-menu__item--lv1");
 				pos = $(".fs-l-sideArea li.fs-pt-menu__item--lv1").index(target);
 				$.cookie("side_category", pos, {
@@ -149,11 +148,11 @@
 				});
 			});
 			//サイドナビ開閉
-			$(".fs-l-main .fs-l-sideArea ul li").click(function() {
+			$(".fs-l-main .fs-l-sideArea ul li").click(function () {
 				$(this).find("ul").slideToggle("fast");
 				$(this).toggleClass("open");
 			});
-			$(".fs-l-main .fs-l-sideArea ul ul li").click(function(event) {
+			$(".fs-l-main .fs-l-sideArea ul ul li").click(function (event) {
 				event.stopPropagation();
 			});
 			//			$(".fs-l-main .fs-l-sideArea ul ul li").click(function (e) {
@@ -161,7 +160,7 @@
 			//			});
 			//アンカーリンクスムーズスクロール
 			$('a[href^="#"],area[href^="#"]').unbind('click');
-			$('a[href^="#"],area[href^="#"]').click(function() {
+			$('a[href^="#"],area[href^="#"]').click(function () {
 				var speed = 500; // ミリ秒
 				var href = $(this).attr("href");
 				var target = $(href == "#" || href == "" ? 'html' : href);
@@ -177,7 +176,7 @@
 	<link href="https://hedy.itembox.design/item/css/slick.css?t=20230405124946" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="https://hedy.itembox.design/item/js/slick.min.js?t=20230405124946"></script>
 	<script>
-		$(function() {
+		$(function () {
 			$('.snap_slider').slick({
 				autoplay: true,
 				autoplaySpeed: 4000,
@@ -201,11 +200,11 @@
 		});
 	</script>
 	<script>
-		$(function() {
+		$(function () {
 			var h = $('.fs-l-header').outerHeight() - 1;
 			$('.hd_menu_a').css('top', h + 'px');
 			// SEARCH ブランド
-			$('.hd_search').on('click', function() {
+			$('.hd_search').on('click', function () {
 				if ($('.hd_search').hasClass('open')) {
 					$('.hd_search').removeClass('open');
 					$('.hd_menu_a').slideUp('500');
@@ -217,7 +216,7 @@
 					return false;
 				}
 			});
-			$(document).on('click', function() {
+			$(document).on('click', function () {
 				if (!$(event.target).closest('.hd_menu_a').length) {
 					$('.hd_search').removeClass('open');
 					$('.hd_menu_a').slideUp('500');
@@ -332,7 +331,7 @@
 		<link href="https://hedy.itembox.design/item/css/slick.css?t=20230405124946" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="https://hedy.itembox.design/item/js/slick.min_sp_top_mv.js?t=20210401140400"></script>
 		<script>
-			$(function() {
+			$(function () {
 				$('.top_slider').slick({
 					infinite: true,
 					arrows: false,
@@ -519,7 +518,7 @@
 																	</tr>
 
 																	<tr class="colorbox">
-																		<th class="fs-c-inputTable__headerCell"><a href="#" class="search-panel-title js-drawer-accordion-toggle">COLOR</a></th>
+																		<th class="fs-c-inputTable__headerCell"><a href="#" class="search-panel-title js-drawer-accordion-toggle color-title">COLOR</a></th>
 																		<td class="fs-c-inputTable__dataCell search-panel-wrap">
 																			<div class="fs-c-checkboxGroup group-check-color-1  search-panel-content">
 																				<span class="fs-c-checkbox">
@@ -1137,7 +1136,6 @@ try{
 			<!--20221102 add-->
 			<!-- **独自js_sp↓↓ -->
 			<!-- ここにjsファイルURLを追記 -->
-			<script type="text/javascript" src="/item/js/custom.js?t=20230405124946"></script>
 			<script type="text/javascript" src="/item/js/dev_custom.js"></script>
 			<!-- **独自js_sp -->
 			<!--20221102 add-->

@@ -272,6 +272,7 @@ function drawer_close(current_navi) {
 	});
 
 	dbody.classList.remove('is-drawer-open');
+	//dbody.style.removeProperty('overflow');
 	navi_open = false;
 	enableBodyScroll(js_drawer_menu_lists);
 	clearAllBodyScrollLocks();
@@ -368,6 +369,8 @@ if (js_slidechild_menu_open.length) {
 					//	active_slide_contents.style = '';
 					//	l_main_navi.classList.remove('is-open');
 					//	l_main_navi.style.removeProperty('opacity');
+
+
 				}, // 処理後じ実行する関数を指定
 			});
 			clearAllBodyScrollLocks();
