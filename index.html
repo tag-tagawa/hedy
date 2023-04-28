@@ -233,10 +233,10 @@ _FS.setTrackingTag('%3C%21--+Global+site+tag+%28gtag.js%29+-+Google+Ads%3A+98348
           <ul class="fs-p-headerNavigation__list">
             <li class="fs-p-headerNavigation__listItem search has-child">
               <a class="js-submenu-open">
-                <img src="https://hedy.itembox.design/item/images/common/icon_search.svg" />
+                <img src="https://hedy.itembox.design/item/images/common/icon_search.svg" alt="検索">
                 <span>SEARCH</span></a>
               <ul class="has-child__Search gnav_submenu">
-                <div class="has-child__Search__inner"> 
+                <li class="has-child__Search__inner"> 
                   <!-- **詳細商品検索フォーム（フリーパーツ）↓↓ -->
                   <div class="fs-p-productSearch">
                     <div class="fs-p-productSearch__parameter"></div>
@@ -253,7 +253,7 @@ _FS.setTrackingTag('%3C%21--+Global+site+tag+%28gtag.js%29+-+Google+Ads%3A+98348
                                 <td class="fs-c-inputTable__dataCell"><input type="text" name="keyword" maxlength="1000" id="fs_input_productSearchKeyword" value="" placeholder="入力文字ダミー" tabindex="1"></td>
                               </tr>
                               <tr class="brand_area">
-                                <th class="fs-c-inputTable__headerCell"><label for="fs_input_productSearchBrand">BRAND</label>
+                                <th class="fs-c-inputTable__headerCell"><label for="fs_input_productSearchBundle">BRAND</label>
                                 </th>
                                 <td class="fs-c-inputTable__dataCell"><div class="fs-c-dropdown">
                                     <select class="fs-c-dropdown__menu fs-c-dropdown__menu_new" name="tag" id="fs_input_productSearchBundle" tabindex="2">
@@ -432,11 +432,11 @@ _FS.setTrackingTag('%3C%21--+Global+site+tag+%28gtag.js%29+-+Google+Ads%3A+98348
                                 <td class="fs-c-inputTable__dataCell">
                                   <div class="fs-c-inputTextGroup">
                                     <span class="fs-c-inputTextGroup__item">￥
-                                      <input type="number" name="minprice" maxlength="9" id="fs_input_productSearchPrice1" value="{% search.minprice %}" tabindex="5">
+                                      <input type="number" name="minprice" id="fs_input_productSearchPrice1" value="{% search.minprice %}" tabindex="5">
                                     </span>
                                     <span>〜</span>
                                     <span class="fs-c-inputTextGroup__item">￥
-                                      <input type="number" name="maxprice" maxlength="9" id="fs_input_productSearchPrice2" value="{% search.maxprice %}" tabindex="6">
+                                      <input type="number" name="maxprice" id="fs_input_productSearchPrice2" value="{% search.maxprice %}" tabindex="6">
                                     </span>
                                   </div>
                                 </td>
@@ -548,7 +548,7 @@ _FS.setTrackingTag('%3C%21--+Global+site+tag+%28gtag.js%29+-+Google+Ads%3A+98348
               </script> 
             
                   <!-- **詳細商品検索フォーム（フリーパーツ）↑↑ --> 
-                </div>
+                </li>
               <!--</div>-->              
               </ul>
             </li>
@@ -626,14 +626,12 @@ _FS.setTrackingTag('%3C%21--+Global+site+tag+%28gtag.js%29+-+Google+Ads%3A+98348
             <li class="fs-p-headerNavigation__listItem has-child"><a class="js-submenu-open"><span>RECRUIT</span></a>
               <ul class="child_menu gnav_submenu">
                 
-                <li><a href="/c/hedyrecruit/salesstaff"><span class="list_item_red">NEW</span>代官山店ショップスタッフ</a></li>
+                <!-- <li><a href="/c/hedyrecruit/salesstaff"><span class="list_item_red">NEW</span>代官山店ショップスタッフ</a></li> -->
                 <li><a href="/c/hedyrecruit/osaka-sales"><span class="list_item_red">NEW</span>大阪店ショップスタッフ</a></li>
                 <li><a href="/c/hedyrecruit/osaka-arbeit"><span class="list_item_red">NEW</span>大阪店商品管理</a></li>
                 <li><a href="/c/hedyrecruit/arbeit"><span class="list_item_red">NEW</span>本社アルバイト</a></li>
                 <li><a href="/c/hedyrecruit/buyer"><span class="list_item_red">NEW</span>バイヤー</a></li>
                 <li><a href="/c/hedyrecruit/recruit_sales"><span class="list_item_red">NEW</span>事業統括アシスタント</a></li>
-
-
               </ul> 
             </li>
             <li class="fs-p-headerNavigation__listItem has-child"><a class="js-submenu-open"><span>FOLLOW US</span></a>
@@ -673,7 +671,7 @@ _FS.setTrackingTag('%3C%21--+Global+site+tag+%28gtag.js%29+-+Google+Ads%3A+98348
           <li class="cart fs-pt-menu__item fs-pt-menu__item--lv1">
             <span class="fs-pt-menu__heading fs-pt-menu__heading--lv1">
               
-            <a href="https://www.hedy.jp/p/cart" class="fs-pt-menu__link fs-pt-menu__link--lv1"><p class="fs-client-cart-count"></p></a>
+            <a href="https://www.hedy.jp/p/cart" class="fs-pt-menu__link fs-pt-menu__link--lv1"><span class="fs-client-cart-count"></span></a>
             </span>
           </li>
         </ul>
@@ -777,7 +775,8 @@ width:100%;
   <li class="sliders"><a href="https://www.facebook.com/hedy2013?utm_campaign=TopIcon&utm_medium=cpc&utm_source=IconFacebook"><img src="https://hedy.itembox.design/item/icon06_pc_2x.png?t=20230404154407"></a></li>
 </ul>
 </div>
-<main class="fs-l-main"><div id="fs-page-error-container" class="fs-c-panelContainer">
+<main class="fs-l-main">
+  <div id="fs-page-error-container" class="fs-c-panelContainer">
   
   
 </div>

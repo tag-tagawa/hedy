@@ -3447,6 +3447,11 @@ _:future,
             }
             .fs-p-productSearch{
                 height: 100%;
+                .fs-p-productSearch__search th {
+                    width: auto;
+                    border: none;
+                    height: auto;
+                }
             }
             .fs-p-productSearch,.fs-p-productSearch__form{
                 padding:2px 0 0;

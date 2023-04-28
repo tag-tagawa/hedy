@@ -755,7 +755,7 @@ $global-border-width: 1px;
 						&-search {
 							width: 100%;
 							min-height: 43px;
-							padding: 2px 6px;
+							padding: 2px 6px !important;
 							line-height: 1.4;
 							font-size: 16px;
 
@@ -770,7 +770,7 @@ $global-border-width: 1px;
 						&-search {
 							border: 1px solid #000;
 							color: #fff;
-							background-color: #000;
+							background-color: #000 !important;
 
 							&::before {
 								content: "";
