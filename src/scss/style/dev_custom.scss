@@ -3236,8 +3236,10 @@ _:future,
 }
 // @media screen and (min-width: 768px){
     $bg_color_white: #fff;
-
-
+    #fs_p_scrollingCartButton{
+        display:none !important;
+    }
+    
 
     .fs-l-header.l_header_ver2{
         padding:9px 8px 11px;
@@ -3267,7 +3269,7 @@ _:future,
             box-shadow: 0 0 0px 999px rgba(255, 255, 255, -1) inset;
             transition: background-color 10000s ease-in-out 0s;
         }
-        
+
         .fs-p-logo{
             height: 65px;
             padding: 3px 8px 8px 8px;
