@@ -837,8 +837,8 @@ $global-border-width: 1px;
 				top: 50px;
 				//right: -100%;
 
-				right: -100%;
-				display: none;
+				right: 100%;
+				//display: none;
 				display: block;
 				width: 100%;
 				z-index: 101;
