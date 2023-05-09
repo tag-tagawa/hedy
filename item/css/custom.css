@@ -1234,6 +1234,10 @@ _:future,
 
 /*----------  TOP ----------*/
 /*--------header-------*/
+#fs_p_scrollingCartButton {
+	display: none !important;
+}
+
 .fs-l-header.l_header_ver2 {
 	padding: 9px 8px 11px;
 }
